@@ -59,8 +59,12 @@ public class Display extends AppCompatActivity {
                 TotalWage = employeeHours * 90;
                 ttotalwage.setText("Total Wage: " +String.valueOf(TotalWage));
             }
+            if (employeetype.equals("Probationary")){
+                TotalWage = 720 + (100 * (employeeHours - 8.0));
+                ttotalwage.setText("Total Wage with Overtime: ₱" + String.valueOf(TotalWage));
+            }
+            }
 
         }
 
     }
-}
